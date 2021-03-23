@@ -3,32 +3,84 @@
 
   <head>
 
-    <title>Hapu</title>
+    <title>Juliana Lacerda Ortodontia</title>
 
     <!-- Stylesheet -->
-    <link href="styles.scss" rel="stylesheet/less">
+    <link href="assets/styles.scss" rel="stylesheet/less">
+    <!-- Media Query -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Carousel JS library and styles -->
+    <script src="assets/flickity/flickity.pkgd.min.js"></script>
+    <link rel="stylesheet" href="assets/flickity/flickity.css">
     <!-- Less Compiler -->
     <script src="//cdn.jsdelivr.net/npm/less@3.13" type="text/javascript"></script>
     <!-- FA Icons -->
     <script src="https://kit.fontawesome.com/af6a9f2a9f.js" crossorigin="anonymous"></script>
     <!-- Page Icon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/resources/hapu_green_logo.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.png" />
 
   </head>
 
   <body>
     <nav>
       <i class="fas fa-phone-alt"></i>
-      <div></div>
+      <div>teste Noah</div>
       <i class="fas fa-map-marker-alt"></i>
-      <div></div>
+      <div>texto</div>
     </nav>
-    <header>
 
+    <header>
+      <div class="logo">
+        <img src="assets/img/logo-and-text.png" alt="Juliana Lacerda Ortodontia">
+      </div>
     </header>
-    <section></section>
-    <section></section>
-    <section></section>
+
+    <section class="curriculum">
+      <div class="photo">
+        <img src="assets/img/juliana.png" alt="Juliana Lacerda">
+      </div>
+      <div class="mini-cv">
+        <h2>Quem cuida do seu sorriso</h2>
+        <ul>
+          <li>
+            Graduação: Universidade Federal de Goiás - Faculdade de Odontologia - 1997
+          </li>
+          <li>
+            Especialista em Odontopediatria pela ABO-GO 2020
+          </li>
+          <li>
+            Especialista em Ortodontia pela FUNORTE - 2013
+          </li>
+          <li>
+            Invisalign Doctor
+          </li>
+          <li>
+            Atuação nas áreas de Ortodontia, Ortopedia Funcional dos maxilares, Odontologia miofuncional, Alinhadores Invisalign
+          </li>
+          <li>
+            Ortodontia em adultos, adolescentes e crianças
+          </li>
+          <li>
+            Clareamento dental
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="treatments">
+      <div class="gallery js-flickity"
+        data-flickity-options='{ "wrapAround": true }'>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+        <div class="gallery-cell"></div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="map"></div>
+      <div class="mailer"></div>
+    </section>
   </body>
 </html>
