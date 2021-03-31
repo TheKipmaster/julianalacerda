@@ -124,6 +124,7 @@ header {
   flex-direction: row;
   // background-color: var(--blue-green-4);
   padding: 5em 5em;
+  border-bottom: 3px solid var(--blue-green-2);
 
   .photo {
     height: 400px;
@@ -144,32 +145,80 @@ header {
     margin-left: 1.2em;
 
     h2 {
+      font-size: 2em;
       text-align: center;
+    }
+
+    div {
+      font-size: 1.5em;
+      line-height: 1.5em;
+      text-align: justify;
     }
   }
 }
 
 .treatments {
+  border-bottom: 3px solid var(--blue-green-2);
+  padding: 5em 2em;
+
+  h2 {
+    color: var(--blue-green-1);
+    font-size: 4em;
+    font-weight: normal;
+    text-align: center;
+  }
+
   .gallery {
-    background: #EEE;
+    height: 60vh;
   }
 
   .gallery-cell {
-    width: 66%;
-    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 33%;
+    height: 60vh;
     margin-right: 10px;
-    background: #8C8;
+    // background: #8C8;
     counter-increment: gallery-cell;
+
+    img {
+      width: 90%;
+      // flex: 5;
+      border-radius: 15px;
+    }
+
+    button {
+      width: auto;
+      // max-width: 50%;
+
+      background-color: var(--blue-green-1);
+      color: white;
+      // font-size: 1.2em;
+
+      margin-top: 1em;
+      border: none;
+      border-radius: 5px;
+      padding: 1rem 4rem;
+    }
   }
 
-  /* cell number */
-  .gallery-cell:before {
-    display: block;
-    text-align: center;
-    content: counter(gallery-cell);
-    line-height: 200px;
-    font-size: 80px;
-    color: white;
+  .flickity-page-dots {
+    display: none;
+  }
+
+  /* big buttons, no circle */
+  .flickity-prev-next-button {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+  }
+
+  /* arrow color */
+  .flickity-prev-next-button .arrow {
+    fill: var(--blue-green-1);
   }
 }
 
@@ -231,11 +280,14 @@ header {
   .mailer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     flex: 1;
     text-align: center;
 
+    padding: 0 2em;
+
     h1 {
-      font-size: 3.5em;
+      font-size: 3.4em;
       margin: 0;
       font-weight: normal;
       color: var(--blue-green-1);
@@ -246,6 +298,53 @@ header {
       margin: 0.5em 0;
       font-weight: normal;
       color: var(--blue-green-1);
+    }
+
+    form {
+      display: grid;
+      grid-gap: 1.3em;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      justify-items: center;
+
+      background-color: var(--accent);
+      border-radius: 25px;
+      margin: 0 1em;
+      padding: 1.2em;
+
+      input, textarea {
+        background-color: var(--blue-green-1);
+        border: none;
+        color: white;
+        padding: 0.5em;
+        border-radius: 5px;
+        width: 100%;
+
+        &::placeholder {
+          color: white;
+        }
+
+        &#time, &#message {
+          grid-column: span 2;
+        }
+      }
+
+      textarea {
+        height: 5em;
+      }
+
+      button {
+        grid-column: span 2;
+        color: white;
+        background-color: var(--blue-green-1);
+        border: none;
+
+        padding: 0.5em 1em;
+        align-self: center;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }
