@@ -4,8 +4,9 @@
   --blue-green-2: #3EACA5;
   --blue-green-3: #46BFB7;
   --blue-green-4: #C4F2F0;
-  --off-white:    #C4CACA;
-  --accent:       #dab17f;
+  --off-white: #C4CACA;
+  --accent-1: #dab17f;
+  --accent-2: #dfd4a9;
 }
 
 @font-face {
@@ -56,7 +57,7 @@ nav {
 
   font-size: 1.5em;
   color: white;
-  background-color: var(--accent);
+  background-color: var(--accent-1);
 
   padding: 0.3em 0;
 
@@ -84,7 +85,7 @@ nav {
     }
 
     &.phone {
-      span{
+      span {
         line-height: 1.5em;
       }
     }
@@ -98,7 +99,7 @@ header {
   height: 100vh;
 
   background: linear-gradient(rgba(218, 177, 127, 0.7), rgba(218, 177, 127, 0.7)),
-              no-repeat url("img/header.gif");
+    no-repeat url("img/header.gif");
   background-size: cover;
   // opacity: 0.3;
 
@@ -122,22 +123,23 @@ header {
 .curriculum {
   display: flex;
   flex-direction: row;
-  // background-color: var(--blue-green-4);
+  flex-wrap: wrap;
   padding: 5em 5em;
   border-bottom: 3px solid var(--blue-green-2);
 
   .photo {
-    height: 400px;
+    flex: 2;
     border-radius: 500px;
     border: 4px solid var(--blue-green-2);
 
     img {
-      height: 100%;
+      width: 100%;
       border-radius: 500px;
     }
   }
 
   .mini-cv {
+    flex: 5;
     font-size: 1.3em;
     line-height: 1.4em;
     color: var(--blue-green-1);
@@ -192,7 +194,6 @@ header {
 
     button {
       width: auto;
-      // max-width: 50%;
 
       background-color: var(--blue-green-1);
       color: white;
@@ -225,8 +226,9 @@ header {
 .contact {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 5em 5em;
-  height: 70vh;
+  min-height: 70vh;
 
 
   .map {
@@ -257,22 +259,26 @@ header {
     }
 
     .mapouter {
-      position:relative;
-      text-align:right;
+      position: relative;
+      text-align: right;
       height: 50%;
+      width: 100%;
 
       margin-top: 1em;
-      height:250px;
-      // width:600px;
 
       .gmap_canvas {
-        overflow:hidden;
-        background:none !important;
+        overflow: hidden;
+        background: none !important;
         height: 100%;
 
         border-radius: 15px;
         // height:500px;
         // width:600px;
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -306,12 +312,13 @@ header {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       justify-items: center;
 
-      background-color: var(--accent);
+      background-color: var(--accent-2);
       border-radius: 25px;
       margin: 0 1em;
       padding: 1.2em;
 
-      input, textarea {
+      input,
+      textarea {
         background-color: var(--blue-green-1);
         border: none;
         color: white;
@@ -323,7 +330,8 @@ header {
           color: white;
         }
 
-        &#time, &#message {
+        &#time,
+        &#message {
           grid-column: span 2;
         }
       }
@@ -345,6 +353,41 @@ header {
           cursor: pointer;
         }
       }
+    }
+  }
+}
+
+// Styles for screens thinner than 768px
+
+@media (max-width: 768px) {
+  header {
+    .logo {
+      display: none;
+    }
+  }
+
+  .curriculum {
+    padding: 1em;
+    flex-direction: column;
+
+    font-size: 0.7em;
+  }
+
+  .treatments {
+    padding: 0;
+  }
+
+  .contact {
+    padding: 1em;
+
+    .map {
+      i {
+        display: none;
+      }
+    }
+
+    .mailer {
+      padding: 0;
     }
   }
 }
