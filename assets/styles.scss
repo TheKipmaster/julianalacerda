@@ -98,8 +98,7 @@ header {
   justify-content: center;
   height: 100vh;
 
-  background: linear-gradient(rgba(218, 177, 127, 0.7), rgba(218, 177, 127, 0.7)),
-    no-repeat url("img/header.gif");
+  background: no-repeat url("img/masthead.gif");
   background-size: cover;
   // opacity: 0.3;
 
@@ -161,18 +160,19 @@ header {
 
 .treatments {
   border-bottom: 3px solid var(--blue-green-2);
-  padding: 5em 2em;
+  padding: 4em 0;
 
   h2 {
     color: var(--blue-green-1);
     font-size: 4em;
     font-weight: normal;
     text-align: center;
+    margin-top: 0;
   }
 
-  .gallery {
-    height: 60vh;
-  }
+  // .gallery {
+  //   height: 60vh;
+  // }
 
   .gallery-cell {
     display: flex;
@@ -180,11 +180,12 @@ header {
     justify-content: center;
     align-items: center;
 
-    width: 33%;
-    height: 60vh;
+    width: 30%;
     margin-right: 10px;
     // background: #8C8;
     counter-increment: gallery-cell;
+
+    cursor: pointer;
 
     img {
       width: 90%;
@@ -193,7 +194,7 @@ header {
     }
 
     button {
-      width: auto;
+      width: 90%;
 
       background-color: var(--blue-green-1);
       color: white;
@@ -202,7 +203,9 @@ header {
       margin-top: 1em;
       border: none;
       border-radius: 5px;
-      padding: 1rem 4rem;
+      padding: 1rem 0;
+
+      cursor: pointer;
     }
   }
 
@@ -210,11 +213,15 @@ header {
     display: none;
   }
 
-  /* big buttons, no circle */
+  /* small buttons, no circle */
   .flickity-prev-next-button {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: transparent;
+
+    // &:hover {
+    //   background: transparent;
+    // }
   }
 
   /* arrow color */
@@ -374,7 +381,15 @@ header {
   }
 
   .treatments {
-    padding: 0;
+    padding: 4em 0;
+
+    .gallery-cell {
+      width: 80%;
+    }
+
+    .flickity-prev-next-button {
+      display: none;
+    }
   }
 
   .contact {
