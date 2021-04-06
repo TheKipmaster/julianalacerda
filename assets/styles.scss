@@ -79,7 +79,7 @@ nav {
 
     &.address {
       span {
-        font-size: 1rem;
+        font-size: 0.8em;
         text-align: center;
       }
     }
@@ -359,8 +359,12 @@ header {
 @media (max-width: 768px) {
   header {
     .logo {
-      display: none;
+      height: 30%;
     }
+  }
+
+  nav {
+    font-size: 1em;
   }
 
   .curriculum {
