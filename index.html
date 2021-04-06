@@ -11,13 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Character Encoding -->
     <meta charset="utf-8" />
-    <!-- Carousel JS library and styles -->
-    <script src="assets/flickity/flickity.pkgd.min.js"></script>
+    <!-- Carousel styles -->
     <link rel="stylesheet" href="assets/flickity/flickity.css">
-    <!-- Less Compiler -->
-    <script src="//cdn.jsdelivr.net/npm/less@3.13" type="text/javascript"></script>
-    <!-- FA Icons -->
-    <script src="https://kit.fontawesome.com/af6a9f2a9f.js" crossorigin="anonymous"></script>
     <!-- Page Icon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo.png" />
 
@@ -59,7 +54,7 @@
 
       <section class="treatments">
         <h2>Tratamentos</h2>
-        <div class="gallery js-flickity" data-flickity='{ "autoPlay": true, "wrapAround": true, "imagesLoaded": true }'>
+        <div class="gallery js-flickity" data-flickity-options='{ "autoPlay": true, "wrapAround": true, "imagesLoaded": true }'>
           <div class="gallery-cell">
             <img src="assets/img/background.jpg" alt="Invisalign">
             <button>Invisalign</button>
@@ -114,4 +109,10 @@
       </section>
     </div>
   </body>
+  <!-- Carousel JS -->
+  <script src="assets/flickity/flickity.pkgd.min.js"></script>
+  <!-- Less Compiler -->
+  <script src="//cdn.jsdelivr.net/npm/less@3.13" type="text/javascript"></script>
+  <!-- FA Icons -->
+  <script src="https://kit.fontawesome.com/af6a9f2a9f.js" crossorigin="anonymous"></script>
 </html>
