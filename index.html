@@ -18,7 +18,26 @@
 
   </head>
 
-  <body>
+  <body id="page-top">
+
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+      <div class="spinner diagonal part-1"></div>
+      <div class="spinner horizontal"></div>
+      <div class="spinner diagonal part-2"></div>
+    </label>
+
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <li>Navegação</li>
+        <li><a href="#page-top">Início</a></li>
+        <li><a href="#curriculum">Dra. Juliana Lacerda</a></li>
+        <li><a href="#treatments">Tratamentos</a></li>
+        <li><a href="#">Depoimentos</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </div>
+
     <nav>
       <div class="phone">
         <i class="fas fa-phone"></i>
@@ -37,7 +56,7 @@
     </header>
 
     <div class="tail">
-      <section class="curriculum">
+      <section class="curriculum" id="curriculum">
         <div class="photo">
           <img src="assets/img/juliana.png" alt="Juliana Lacerda">
         </div>
@@ -52,7 +71,7 @@
         </div>
       </section>
 
-      <section class="treatments">
+      <section class="treatments" id="treatments">
         <h2>Tratamentos</h2>
         <div class="gallery js-flickity">
           <div class="gallery-cell">
@@ -78,7 +97,7 @@
         </div>
       </section>
 
-      <section class="contact">
+      <section class="contact" id="contact">
         <div class="map">
           <i class="fas fa-map-marker-alt"></i>
           <div class="address">Av Dom Prudêncio n. 40 sala 2. 2° andar. Odontoimagem Bairro Jundiaí - Anápolis - GO 75113-080</div>
