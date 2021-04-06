@@ -170,10 +170,6 @@ header {
     margin-top: 0;
   }
 
-  // .gallery {
-  //   height: 60vh;
-  // }
-
   .gallery-cell {
     display: flex;
     flex-direction: column;
@@ -182,8 +178,6 @@ header {
 
     width: 30%;
     margin-right: 10px;
-    // background: #8C8;
-    counter-increment: gallery-cell;
 
     cursor: pointer;
 
@@ -218,10 +212,6 @@ header {
     width: 80px;
     height: 80px;
     background: transparent;
-
-    // &:hover {
-    //   background: transparent;
-    // }
   }
 
   /* arrow color */
