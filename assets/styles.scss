@@ -228,7 +228,8 @@ header {
   justify-content: center;
   height: 100vh;
 
-  background: no-repeat url("img/masthead.gif");
+  background: linear-gradient(rgba(218, 177, 127, 0.5), rgba(218, 177, 127, 0.5)),
+              no-repeat url("img/masthead.gif");
   background-size: cover;
 
   // depoimentos.html
@@ -551,7 +552,8 @@ section.testimonies {
 
 @media (max-width: 768px) {
   header {
-    background: no-repeat url("img/mobile-masthead.gif");
+    background: linear-gradient(rgba(218, 177, 127, 0.5), rgba(218, 177, 127, 0.5)),
+                no-repeat url("img/mobile-masthead.gif");
     background-size: cover;
 
     .logo {
