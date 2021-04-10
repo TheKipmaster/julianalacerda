@@ -229,7 +229,7 @@ header {
   background-size: cover;
 
   // depoimentos.html
-  &.testimonies {
+  &.alt {
     background: no-repeat url("img/mathead-alt.jpg");
     background-size: cover;
   }
@@ -306,6 +306,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 
     width: 30%;
     margin-right: 10px;
@@ -352,7 +353,7 @@ header {
 }
 
 // depoimentos.html
-section.testimonies {
+.testimonies {
   padding: 4em 4em 0 4em;
   color: var(--blue-green-1);
 
