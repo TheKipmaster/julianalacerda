@@ -275,12 +275,13 @@ header {
   border-bottom: 3px solid var(--blue-green-2);
 
   .photo {
+    display: flex;
+    align-items: center;
     flex: 2;
-    border-radius: 500px;
-    border: 4px solid var(--blue-green-2);
 
     img {
       width: 100%;
+      border: 4px solid var(--blue-green-2);
       border-radius: 500px;
     }
   }
@@ -388,8 +389,6 @@ header {
 
     .photo {
       flex: 2;
-      border-radius: 500px;
-      border: 4px solid var(--blue-green-2);
       margin-right: 2em;
       height: fit-content;
 
@@ -397,6 +396,7 @@ header {
         width: 100%;
         height: 100%;
         border-radius: 500px;
+        border: 4px solid var(--blue-green-2);
       }
     }
 
@@ -428,11 +428,10 @@ header {
     &.top {
       flex-direction: row;
       flex-wrap: wrap-reverse;
+      align-items: center;
 
       .photo {
         flex: 2;
-        border-radius: 500px;
-        border: 4px solid var(--blue-green-2);
         margin-right: 2em;
         height: fit-content;
 
@@ -440,18 +439,18 @@ header {
           width: 100%;
           height: 100%;
           border-radius: 500px;
+          border: 4px solid var(--blue-green-2);
         }
       }
 
       p {
         flex: 4;
-        margin: 0;
+        // margin: 0;
       }
     }
 
     &.bottom {
       flex-direction: column;
-      margin-top: 2em;
     }
 
     p {
@@ -473,7 +472,6 @@ header {
   flex-direction: row;
   flex-wrap: wrap;
   padding: 5em 5em;
-  min-height: 70vh;
 
 
   .map {
@@ -602,9 +600,61 @@ header {
   }
 }
 
-// Styles for screens thinner than 768px
+// Styles for ipad-sized screens
+@media (min-width: 481px) and (max-width: 768px) {
+  .curriculum {
+    flex-direction: column;
+    padding: 1em;
 
-@media (max-width: 768px) {
+    .photo {
+      justify-content: center;
+      img {
+        width: 70%;
+      }
+    }
+  }
+
+  .testimonies {
+    div.top {
+      flex-direction: column-reverse;
+
+      .photo {
+        margin: 0;
+        justify-content: center;
+
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  .treatment {
+    padding: 1em;
+
+    div {
+      flex-direction: column;
+      align-items: center;
+
+      .photo {
+        width: 70%;
+        margin: 0;
+      }
+    }
+  }
+
+  .contact {
+    padding: 1em;
+
+    .mailer {
+      padding: 0;
+    }
+  }
+}
+
+// Styles for phone-sized screens
+@media (max-width: 480px) {
   header {
     background: linear-gradient(rgba(218, 177, 127, 0.5), rgba(218, 177, 127, 0.5)),
                 no-repeat url("img/mobile-masthead.gif");
@@ -654,8 +704,14 @@ header {
   }
 
   .treatment {
+    padding: 1em;
+
     div {
       flex-direction: column;
+
+      .photo {
+        margin: 0;
+      }
     }
   }
 
