@@ -6,5 +6,5 @@ var flkty = new Flickity('.gallery', {
 
 window.addEventListener('load', (event) => {
   flkty.resize();
-  console.log("resized");
+  // console.log("resized");
 });
