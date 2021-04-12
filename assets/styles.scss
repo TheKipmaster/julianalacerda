@@ -239,10 +239,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 92vh;
 
-  background: linear-gradient(rgba(218, 177, 127, 0.5), rgba(218, 177, 127, 0.5)),
-              no-repeat url("img/masthead.gif");
+  background: linear-gradient(rgba(218, 177, 127, 0.5), rgba(218, 177, 127, 0.5));
+              // no-repeat url("img/masthead.mpeg");
   background-size: cover;
 
   // depoimentos.html
@@ -261,6 +261,21 @@ header {
       height: 100%;
     }
   }
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -99;
+
+    &.desktop {
+      width: 100%;
+    }
+
+    &.mobile {
+      display: none;
+    }
+  }
 }
 
 .tail {
@@ -277,6 +292,7 @@ header {
   .photo {
     display: flex;
     align-items: center;
+    justify-content: center;
     flex: 2;
 
     img {
@@ -656,12 +672,25 @@ header {
 // Styles for phone-sized screens
 @media (max-width: 480px) {
   header {
-    background: linear-gradient(rgba(218, 177, 127, 0.5), rgba(218, 177, 127, 0.5)),
-                no-repeat url("img/mobile-masthead.gif");
+    background: linear-gradient(rgba(218, 177, 127, 0.5), rgba(218, 177, 127, 0.5));
+                // no-repeat url("img/mobile-masthead.mpeg");
     background-size: cover;
 
     .logo {
       height: 30%;
+    }
+
+    video {
+      &.mobile {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+      }
+
+      &.desktop {
+        display: none;
+      }
     }
   }
 
@@ -689,10 +718,24 @@ header {
     flex-direction: column;
 
     font-size: 0.7em;
+
+    .photo {
+      img {
+        width: 95%;
+      }
+    }
+
+    .mini-cv {
+      margin: 0;
+    }
   }
 
   .treatments {
     padding: 4em 0;
+
+    h2 {
+      font-size: 3em;
+    }
 
     .gallery-cell {
       width: 80%;
